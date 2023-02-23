@@ -1,0 +1,83 @@
+TestNG--Unit test framework
+TDD-- Test Driven Development
+
+
+purpose---design test case in a systematic way
+--html report
+--different annotation
+--priorities/sequence
+--dependency
+--grouping
+--data provider
+
+
+testNG--open source, free
+JAR file
+
+---Java unit testing framework
+
+
+	How to get html.index file?
+
+	Right click on your project and Refresh the project
+	Then you will get test-output folder
+	Then expand that folder you will see index.html
+	Then right click on that folder and go to properties and 
+	Go to location then copy and paste in Chrome browser
+	Then you will get all result on there then you can send to your manager
+	
+	After execute every time you have to refresh the folder.
+	This is the one advantage/feature of testNG.
+	
+	Feature of TestNG
+	we can grouping for testing 
+	we can give to priority for testing
+	we can run the xml file 
+	we can use dependsOnMethod, if there is any dependency between two or more test case
+	
+	@Test(priority=1)// give the priority which one is going to execute first(1,2,3....etc)
+	@Test(groups="login")// we can divide in to the group make easy to when we try to run same types of test case in same time 
+	@Test(dependsOnMethods="Login")
+	@Test(DependsOnMethods="Login")
+	@Test(invocationCount=10)// this will run same test case 10 time, we don't need to write 10 time same test case
+	
+	@Test(timeOut=2000)// this will stop after given time done
+	
+	
+	TestNG.Xml file also called templete file and test runner file. 
+	where we can run all class, all test case on same time one by one thats the reason we create testng.xml file
+	
+	
+	parameter passing using testng.xml
+	
+	1.how to pass parameter from testng.xml to test case
+	2. what is @parameters annotation in TestNG
+	3. How to configure testing.xml file with <Parameters> tag
+	4.Run your test cases with testing.xml file
+	
+	1. Data Driven: from different resources
+	a. Excel file
+	b. Properties file--environment variables OR,Test data
+	c. testng.xml
+	d. xml file
+	e. JSON files
+	f. DB
+	
+	Data Driven Framework with TestNG- data provider
+										(@dataprovider annotation)
+	
+	@Test(dataprovider="getData")
+	Test Case-LoginTest(UserName,password)
+	
+	@dataprovider
+	getData(){
+	
+	Data1-
+	Data2-
+	Data3-
+	Data-4
+	Data-5
+	}
+	
+	
+	
